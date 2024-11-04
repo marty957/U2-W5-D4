@@ -1,0 +1,55 @@
+/*IMPOSTAZIONE GENARELI*/
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+body {
+  background-color: #666666;
+}
+
+/*creazione lavagna*/
+
+.postit_container {
+  margin-top: 2rem;
+  margin-inline: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 28px;
+}
+
+/*creazione dei postit*/
+.postit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Indie Flower", cursive;
+  width: 20%;
+  height: 160px;
+  box-shadow: 6px 6px 10px 0px #00000059;
+}
+.postit h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.postit p {
+  font-size: 1.2rem;
+}
+.yellow {
+  background-color: #efefbb;
+  rotate: -6deg;
+}
+.green {
+  background-color: #baddbb;
+  rotate: 13deg;
+}
+.purple {
+  background-color: #9d9db3;
+  rotate: -8deg;
+}
+
+/*animazioni*/
+.postit:hover {
+  rotate: 0deg;
+  transform: perspective(35px) translateZ(15px);
+  transition: 2s;
+}
