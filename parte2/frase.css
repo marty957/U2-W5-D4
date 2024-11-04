@@ -24,51 +24,50 @@ main {
 .parole {
   color: #6d899b;
   position: relative;
-  display: block;
+  display: inline-block;
+  width: 260px;
+  height: 16px;
 }
 
-i {
+.frase {
   position: absolute;
   opacity: 0;
-  top: -28px;
-  opacity: 0;
-  right: 76px;
+  top: 0;
+  animation: rotation 6s infinite;
+  left: 0;
 }
+
 .uno {
   z-index: 1;
-  animation: rotation 3s infinite 1s;
 }
 .due {
   z-index: 2;
-  opacity: 0;
-  animation: rotation 5s infinite 3s;
+  animation-delay: 2s;
 }
 .tre {
   z-index: 3;
-  opacity: 0;
-  animation: rotation 7s infinite 5s;
+  animation-delay: 4s;
 }
 
 @keyframes rotation {
   0% {
     translate: 0 -50px;
-    opacity: 0.5;
-  }
-  20% {
-    translate: 0 30%;
-    opacity: 0.8;
-  }
-  50% {
-    translate: 0 60%;
-    opacity: 1;
-  }
-
-  75% {
-    translate: 0 80%;
     opacity: 0;
   }
+  10% {
+    translate: 0 0;
+    opacity: 1;
+  }
+  28% {
+    translate: 0 0;
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+    translate: 0 50px;
+  }
+
   100% {
-    translate: 0 100%;
     opacity: 0;
   }
 }
